@@ -9,15 +9,22 @@ const MiPrimerEstado = () => {
 
   const [nombre, setNombre] = useState("Victor");
 
-  const cambiarNombre = (e) => {
-    setNombre("Alejandro");
+  const cambiarNombre = (e, nombreFijo) => {
+    setNombre(nombreFijo);
   };
 
   return (
     <div>
       <h3>Componente: mi primer estado</h3>
-      <strong>{nombre}</strong> <br />
-      <button onClick={cambiarNombre}>Cambiar</button>
+      <strong className="label">{nombre}</strong> <br />
+      <button onClick={(e) => cambiarNombre(e, "Ale")}>
+        Cambiar nombre por Fran
+      </button>
+      <input
+        onKeyUp={(e) => cambiarNombre(e, e.target.value)}
+        type="text"
+        placeholder="Cambia el nombre"
+      />
     </div>
   );
 };
