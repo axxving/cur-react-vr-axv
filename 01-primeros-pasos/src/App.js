@@ -22,7 +22,7 @@ function App() {
           <h2>Este es un nuevo componente:</h2>
           <Segundo></Segundo>
           <h2> Este es el tercer componente </h2>
-          <Tercer nombre="Alex" apellido="Hernandez" ficha={fichamedica} />
+          <Tercer ficha={fichamedica} />
         </header>
       </div>
     </Fragment>
