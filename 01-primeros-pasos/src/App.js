@@ -4,6 +4,7 @@ import "./App.css";
 import MiComponente from "./MiComponente";
 import Segundo from "./components/Segundo";
 import Tercer from "./components/Tercer";
+import EventosComponente from "./components/EventosComponente";
 
 // Funcion del componente
 function App() {
@@ -23,6 +24,8 @@ function App() {
           <Segundo></Segundo>
           <h2> Este es el tercer componente </h2>
           <Tercer ficha={fichamedica} />
+          <h2>Eventos con componentes</h2>
+          <EventosComponente></EventosComponente>
         </header>
       </div>
     </Fragment>
