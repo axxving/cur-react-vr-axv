@@ -23,8 +23,8 @@ const EjercicioComponents = ({ year }) => {
       <h2>Ejercicio con eventos y useState</h2>
       <strong className="label label-green">{yearNow}</strong>
       <p>
-        <button onClick={siguiente}>Next</button>
         <button onClick={anterior}>Back</button>
+        <button onClick={siguiente}>Next</button>
       </p>
       <p>
         Cambiar anio:
