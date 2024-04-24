@@ -43,3 +43,28 @@
   background-color: lightblue;
   color: #282c34;
 }
+
+.label-green {
+  background-color: lightgreen;
+  color: #282c34;
+}
+
+input {
+  padding: 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 15px;
+  margin-top: 25px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #0e1013;
+  transition: all ease-in-out 200ms;
+  color: azure;
+}
