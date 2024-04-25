@@ -44,8 +44,20 @@ const AjaxComponente = () => {
       );
   };
 
+  const getUsuariosAjaxAW = async () => {
+    try {
+      const peticion = await fetch("https://reqres.in/api/users?page=1");
+      const { data } = await peticion.json();
+      setUsuarios(data);
+      console.log(usuarios);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
-    getUsuariosAjaxPms();
+    //getUsuariosAjaxPms();
+    getUsuariosAjaxAW();
   }, []);
 
   return (
