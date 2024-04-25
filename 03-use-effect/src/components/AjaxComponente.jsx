@@ -30,8 +30,22 @@ const AjaxComponente = () => {
     ]);
   };
 
+  const getUsuariosAjaxPms = () => {
+    fetch("https://reqres.in/api/users?page=1")
+      .then((respuesta) => respuesta.json())
+      .then(
+        (resultadoFinal) => {
+          setUsuarios(resultadoFinal.data);
+          console.log(usuarios);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+  };
+
   useEffect(() => {
-    getUsuariosEstaticos();
+    getUsuariosAjaxPms();
   }, []);
 
   return (
