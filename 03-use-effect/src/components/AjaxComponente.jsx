@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const AjaxComponente = () => {
   const [usuarios, setUsuarios] = useState([]);
+  const [cargando, setCargando] = useState(true);
 
   // Generico / basico
   const getUsuariosEstaticos = () => {
@@ -50,6 +51,8 @@ const AjaxComponente = () => {
       const { data } = await peticion.json();
       setUsuarios(data);
       console.log(usuarios);
+      // Si ya se consiguio la informacion ya no carga
+      setCargando(false);
     } catch (error) {
       console.log(error);
     }
@@ -60,20 +63,26 @@ const AjaxComponente = () => {
     getUsuariosAjaxAW();
   }, []);
 
-  return (
-    <div>
-      <h2>Listado de usuarios via AJAX</h2>
-      <ol className="usuarios">
-        {usuarios.map((usuario) => {
-          return (
-            <li key={usuario.id}>
-              {usuario.first_name} {usuario.last_name}
-            </li>
-          );
-        })}
-      </ol>
-    </div>
-  );
+  if (cargando == true) {
+    return <div className="cargando">Cargando datos...</div>;
+  } else {
+    // Cuado todo a resultado bien
+    return (
+      <div>
+        <h2>Listado de usuarios via AJAX</h2>
+        <ol className="usuarios">
+          {usuarios.map((usuario) => {
+            return (
+              <li key={usuario.id}>
+                <img src={usuario.avatar} /> <br />
+                {usuario.first_name} {usuario.last_name}
+              </li>
+            );
+          })}
+        </ol>
+      </div>
+    );
+  }
 };
 
 export default AjaxComponente;
