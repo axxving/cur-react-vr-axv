@@ -37,14 +37,14 @@ const Agregar = () => {
     console.log(elementos);
     // Comprobar si es un array
     if (Array.isArray(elementos)) {
-      // Agregar un elemento nuevo
+      // Agregar un elemento nuevo al array
       elementos.push(peli);
     } else {
       // Array con la nueva peli
       elementos = [peli];
     }
 
-    // guardar en el local storage
+    // Guardar en el local storage
     localStorage.setItem("pelis", JSON.stringify(elementos));
 
     // Devolver un objeto
