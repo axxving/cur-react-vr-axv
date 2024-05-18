@@ -8,7 +8,7 @@ function App() {
 
   const ficha_medica = {
     altura: "1.70",
-    grupo: "A",
+    grupo: "A+",
     estado: "Bueno",
     alergias: "Ninguna"
   }
