@@ -10,7 +10,6 @@ export const MiComponente = () => {
 
     return (
         <div className='mi-comonente'>
-            <hr />
             <h2>Componente generado</h2>
             <p>Datos del usuario:</p>
             <ul>
