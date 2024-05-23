@@ -23,6 +23,14 @@ export const EventosComponente = () => {
         console.log('se cierra');
     }
 
+    const handleDentro = () => {
+        console.log('Estas dentro del input, ingresa tu nombre');
+    }
+
+    const hanldeFuera = (e) => {
+        console.log('Estas fuera del input', e)
+    }
+
     return (
         <div className='container'>
             <h2>EventosComponente</h2>
@@ -40,6 +48,10 @@ export const EventosComponente = () => {
             <div onMouseEnter={ handleOpen } onMouseLeave={handleExit} id='caja'>
                 Pasa por encima
             </div>
+
+            <p>
+                <input type='text' onBlur={(e) => hanldeFuera(e)} onFocus={handleDentro} placeholder='Introduce tu nombre'></input>
+            </p>
 
         </div>
     )
