@@ -11,6 +11,10 @@ export const EventosComponente = () => {
         console.log(event, nombre)
     }
 
+    const handleClickDouble = () => {
+        console.log('Se le dio doble clic al boton')
+    }
+
     return (
         <div className='container'>
             <h2>EventosComponente</h2>
@@ -20,6 +24,9 @@ export const EventosComponente = () => {
 
             {/* Evento de clic con parametros */}
             <button onClick={(event) => hanldeClicWithEvent(event, 'Alejandro')}> Dame clic con parametros </button>
+
+            {/* Evento de doble clic */}
+            <button onDoubleClick={handleClickDouble}>Dame doble clic</button>
 
         </div>
     )
