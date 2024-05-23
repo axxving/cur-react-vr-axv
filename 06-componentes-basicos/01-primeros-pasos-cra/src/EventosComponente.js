@@ -15,6 +15,14 @@ export const EventosComponente = () => {
         console.log('Se le dio doble clic al boton')
     }
 
+    const handleOpen = () => {
+        console.log('Se habre');
+    }
+
+    const handleExit = () => {
+        console.log('se cierra');
+    }
+
     return (
         <div className='container'>
             <h2>EventosComponente</h2>
@@ -27,6 +35,11 @@ export const EventosComponente = () => {
 
             {/* Evento de doble clic */}
             <button onDoubleClick={handleClickDouble}>Dame doble clic</button>
+
+            {/* Evento de hover */}
+            <div onMouseEnter={ handleOpen } onMouseLeave={handleExit} id='caja'>
+                Pasa por encima
+            </div>
 
         </div>
     )
