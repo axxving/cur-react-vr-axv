@@ -21,13 +21,18 @@ function App() {
     setYear(year + 1);
   }
 
+  const yearEscrito = (e) => {
+    setYear(Number(e.target.value));
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         {/* <h1>El estado en React - Hook useState</h1>
         <MiPrimerEstado /> */}
-        <Practica 
+        <Practica
+          yearEscrito={yearEscrito}
           year={year} 
           definirYear={definirYear} 
           lastYear={lastYear} 
