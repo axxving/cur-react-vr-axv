@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(31, 41, 50);
-  color: antiquewhite;
+  color: aliceblue;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,4 +26,13 @@ code {
   padding: 5px;
   border-radius: 5px;
   margin-bottom: 10px;
+}
+
+.verde {
+  background-color: greenyellow;
+  color: black;
+}
+
+.rojo {
+  background-color: crimson;
 }
