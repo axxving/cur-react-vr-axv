@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { AvisoComponent } from "./AvisoComponent";
 
 export const PruebasComponent = () => {
   const [usuario, setUsuario] = useState("Nombre");
@@ -58,6 +59,11 @@ export const PruebasComponent = () => {
           Recetear
         </button>
       </form>
+      <div>
+        {
+          usuario === 'ALEX' ? <AvisoComponent /> : <h2>El nombre es diferente de "ALEX"</h2>
+        }
+      </div>
     </div>
   );
 };
