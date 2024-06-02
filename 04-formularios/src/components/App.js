@@ -1,9 +1,10 @@
 import React from "react";
+import { FormularioComponent } from "./FormularioComponent";
 
 export const App = () => {
   return (
     <>
-      <h1>Componente APP</h1>
+      <FormularioComponent />
     </>
   );
 };

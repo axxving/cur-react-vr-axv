@@ -36,3 +36,25 @@ code {
 .rojo {
   background-color: crimson;
 }
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  input{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+  select {
+    padding: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+}
