@@ -8,12 +8,12 @@ import { Footer } from "./components/Footer";
 export const App = () => {
   return (
     <>
-       <div class="layout">
+       <div className="layout">
 
         {/* Header */}
         <Header />
 
-        <nav class="nav">
+        <nav className="nav">
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Peliculas</a></li>
@@ -22,7 +22,7 @@ export const App = () => {
             </ul>
         </nav>
 
-        <section id="content" class="content">
+        <section id="content" className="content">
 
             {/* Listado */}
             <Listado />

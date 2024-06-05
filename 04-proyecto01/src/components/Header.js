@@ -3,9 +3,9 @@ import React from "react";
 export const Header = () => {
   return (
     <>
-      <header class="header">
-        <div class="logo">
-          <div class="play"></div>
+      <header className="header">
+        <div className="logo">
+          <div className="play"></div>
         </div>
 
         <h1>MisPelis</h1>
