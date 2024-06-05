@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 export const Add = () => {
-
   const tituloComponente = "Agregar pelicula";
 
   const [peliState, setPeliState] = useState({
@@ -10,7 +9,7 @@ export const Add = () => {
   });
 
   // Deesestructuracion de peliState
-  const {titulo, descripcion} = peliState;
+  const { titulo, descripcion } = peliState;
 
   const conseguirDatosForm = (e) => {
     e.preventDefault();
@@ -20,8 +19,10 @@ export const Add = () => {
     let titulo = target.titulo.value;
     let descripcion = target.descripcion.value;
 
-
-    console.log("Formulario enviado", "titulo: " + titulo + " descripcion: " + descripcion);
+    console.log(
+      "Formulario enviado",
+      "titulo: " + titulo + " descripcion: " + descripcion
+    );
 
     // generar objeto de la pelicula a guardar
     let peli = {
@@ -30,10 +31,37 @@ export const Add = () => {
       descripcion,
     };
 
+    // guardar estado
     setPeliState(peli);
 
+    // uso del metodo para guardar en el local storage
+    guardarEnStorage(peli);
+
     console.log(peli);
-  }
+  };
+
+  const guardarEnStorage = (peli) => {
+
+    // Conseguir los elementos que ya se tiene en el localstorage
+    let elementos = JSON.parse(localStorage.getItem('pelis'));
+
+    // Comprobar si es un array
+    if (Array.isArray(elementos)){
+      // Agregar dentro del array un elemento nuevo
+      elementos.push(peli);
+    } else {
+      // Generar un array con la nueva peli
+      elementos = [peli];
+    }
+
+    // Guardar en el localstorage
+    localStorage.setItem('peli', JSON.stringify(elementos));
+
+    console.log(elementos)
+
+    // devolver objeto guardado
+    return peli;
+  };
 
   return (
     <>
@@ -41,27 +69,16 @@ export const Add = () => {
         <h3 class="title">{tituloComponente}</h3>
 
         <strong>
-          {
-            (titulo && descripcion) && "Haz incluido la pelicula: " + titulo
-          }
+          {titulo && descripcion && "Haz incluido la pelicula: " + titulo}
         </strong>
         <form onSubmit={conseguirDatosForm}>
-          <input 
-            type="text" 
-            id="titulo" 
-            name="titulo"
-            placeholder="Titulo" 
-          />
-          <textarea 
+          <input type="text" id="titulo" name="titulo" placeholder="Titulo" />
+          <textarea
             id="descripcion"
-            name="descripcion" 
-            placeholder="Descripción" 
+            name="descripcion"
+            placeholder="Descripción"
           />
-          <input 
-            type="submit" 
-            id="save" 
-            value="Guardar" 
-          />
+          <input type="submit" id="save" value="Guardar" />
         </form>
       </div>
     </>
