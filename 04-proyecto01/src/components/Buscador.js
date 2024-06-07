@@ -2,27 +2,39 @@ import React, { useState } from "react";
 
 export const Buscador = ({ listadoState, setListadoState }) => {
   const [busqueda, setBusqueda] = useState("");
+  const [noEncontrado, setNoEncontrado] = useState(false);
 
   const buscarPeli = (e) => {
-    // Crear un estado y actualizarlo
-    setBusqueda(e.target.value);
+    const valorBusqueda = e.target.value;
+    setBusqueda(valorBusqueda);
 
-    // Filtrar para buscar coincidencias
-    let peliculasFiltradas = listadoState.filter((peli) => {
-      return peli.titulo.toLowerCase().includes(busqueda.toLowerCase());
-    });
-
-    if (busqueda.length <= 1 || peliculasFiltradas.length === 0) {
-      peliculasFiltradas = JSON.parse(localStorage.getItem("pelis"));
+    if (valorBusqueda.trim() === "") {
+      setNoEncontrado(false);
+      setListadoState(JSON.parse(localStorage.getItem("pelis")));
+      return;
     }
 
-    // Actualizar estado del listado principal con lo que he logrado filtrar
+    const peliculasFiltradas = listadoState.filter((peli) => 
+      peli.titulo.toLowerCase().includes(valorBusqueda.toLowerCase())
+    );
+
+    if (peliculasFiltradas.length === 0) {
+      setNoEncontrado(true);
+    } else {
+      setNoEncontrado(false);
+    }
+
     setListadoState(peliculasFiltradas);
   };
 
   return (
     <div className="search">
       <h3 className="title">Buscador: {busqueda}</h3>
+      {noEncontrado && (
+        <span className="no-encontrado">
+          No se ha encontrado ninguna coincidencia
+        </span>
+      )}
       <form>
         <input
           type="text"
@@ -31,7 +43,7 @@ export const Buscador = ({ listadoState, setListadoState }) => {
           autoComplete="off"
           onChange={buscarPeli}
         />
-        <button id="search">Buscar</button>
+        <button id="search" type="button">Buscar</button>
       </form>
     </div>
   );
