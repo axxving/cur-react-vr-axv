@@ -39,7 +39,7 @@ export const RouterPrincipal = () => {
       </div>
 
       <Routes>
-        <Route path="/" element={<Inicio />} />
+        <Route path="/inicio" element={<Inicio />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/articulos" element={<Articulos />} />
         <Route path="*" element={<Error />} />
