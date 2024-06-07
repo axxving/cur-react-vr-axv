@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { GuardarEnStorage } from "../helpers/GuardarEnStorage";
 
-export const Add = ({setListadoState}) => {
+export const Add = ({ setListadoState }) => {
   const tituloComponente = "Agregar película";
 
   const [peliState, setPeliState] = useState({
@@ -20,11 +20,6 @@ export const Add = ({setListadoState}) => {
     let titulo = target.titulo.value;
     let descripcion = target.descripcion.value;
 
-    console.log(
-      "Formulario enviado",
-      "titulo: " + titulo + " descripcion: " + descripcion
-    );
-
     // Generar objeto de la película a guardar
     let peli = {
       id: new Date().getTime(),
@@ -42,8 +37,6 @@ export const Add = ({setListadoState}) => {
 
     // Uso del método para guardar en el localStorage
     GuardarEnStorage("pelis", peli);
-
-    console.log(peli);
   };
 
   return (
