@@ -4,7 +4,7 @@ import { Contacto } from "../components/Contacto";
 import { Inicio } from "../components/Inicio";
 import { Articulos } from "../components/Articulos";
 import { Error } from "../components/Error";
-
+import { Persona } from "../components/Persona";
 export const RouterPrincipal = () => {
   return (
     <BrowserRouter>
@@ -35,6 +35,14 @@ export const RouterPrincipal = () => {
             >Contacto
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/persona"
+              className={({ isActive }) => isActive ? 'active' : ''}
+            >
+              Persona
+            </NavLink>
+          </li>
         </nav>
       </div>
 
@@ -42,6 +50,7 @@ export const RouterPrincipal = () => {
         <Route path="/inicio" element={<Inicio />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/articulos" element={<Articulos />} />
+        <Route path="/persona/:nombre" element={<Persona />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
