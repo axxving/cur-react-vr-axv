@@ -3,12 +3,13 @@ import { useParams } from "react-router-dom";
 
 export const Persona = () => {
 
-  const {nombre} = useParams();
+  const { nombre, apellido } = useParams();
 
   return (
-    <>
-      <h2>Pagina de persona: {nombre}</h2>
-      <p>Esta es la pagina de persona</p>
-    </>
+    <div>
+      {!nombre && <h1>No hay ninguna persona que mostrar</h1>}
+      {nombre && <h1>Página de: {nombre} {apellido ? apellido : ""}</h1>}
+      <p>Esta es la página de persona</p>
+    </div>
   );
 };

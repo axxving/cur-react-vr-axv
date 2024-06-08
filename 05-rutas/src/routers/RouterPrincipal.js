@@ -50,7 +50,9 @@ export const RouterPrincipal = () => {
         <Route path="/inicio" element={<Inicio />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/articulos" element={<Articulos />} />
+        <Route path="/persona" element={<Persona />} />
         <Route path="/persona/:nombre" element={<Persona />} />
+        <Route path="/persona/:nombre/:apellido" element={<Persona />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
