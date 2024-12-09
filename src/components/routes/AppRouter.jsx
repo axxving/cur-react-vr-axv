@@ -6,6 +6,7 @@ import {
     BrowserRouter,
 } from 'react-router-dom';
 import { Home } from '../pages/home';
+import { Components } from '../pages/Components';
 
 export const AppRouter = () => {
     return (
@@ -13,6 +14,8 @@ export const AppRouter = () => {
             <Router>
                 <Routes>
                     <Route path="/" element={<Home />} />
+
+                    <Route path="/componentes" element={<Components />} />
                 </Routes>
             </Router>
         </>
