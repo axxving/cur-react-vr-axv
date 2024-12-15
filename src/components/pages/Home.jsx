@@ -52,6 +52,12 @@ export const Home = () => {
                                 Eventos de React
                             </a>
                         </li>
+
+                        <li className="list-group-item">
+                            <a onClick={() => navigate('/js-functions')}>
+                                El problema de usar funciones de JavaScript
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

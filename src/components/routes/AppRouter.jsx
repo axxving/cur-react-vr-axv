@@ -13,6 +13,7 @@ import { DisplayData } from '../pages/components/components-sections/DisplayData
 import { PropsCommunication } from '../pages/components/components-sections/PropsCommunication';
 import { DefaultPropsDestructuring } from '../pages/components/components-sections/DefaultPropsDestructuring';
 import { Events } from '../pages/components/components-sections/Events';
+import { JsFunctions } from '../pages/components/components-sections/JSFunctions';
 
 export const AppRouter = () => {
     return (
@@ -40,6 +41,8 @@ export const AppRouter = () => {
                     />
 
                     <Route path="/events" element={<Events />} />
+
+                    <Route path="/js-functions" element={<JsFunctions />} />
                 </Routes>
             </Router>
         </>
