@@ -16,6 +16,12 @@ export const Home = () => {
                                 Que es un componente de React?
                             </a>
                         </li>
+
+                        <li className="list-group-item">
+                            <a onClick={() => navigate('/nuevo-componente')}>
+                                Como se hace un componente en React?
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
