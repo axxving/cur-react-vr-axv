@@ -22,6 +22,12 @@ export const Home = () => {
                                 Como se hace un componente en React?
                             </a>
                         </li>
+
+                        <li className="list-group-item">
+                            <a onClick={() => navigate('/fragmentos')}>
+                                Que son y para que sirven los fragmentos?
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
