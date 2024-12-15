@@ -40,6 +40,12 @@ export const Home = () => {
                                 Comunicacion entre componentes
                             </a>
                         </li>
+
+                        <li className="list-group-item">
+                            <a onClick={() => navigate('/default-props')}>
+                                Default Props y Parametros por defecto
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

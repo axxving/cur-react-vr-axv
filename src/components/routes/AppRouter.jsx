@@ -11,6 +11,7 @@ import { NewComponent } from '../pages/components/components-sections/NewCompone
 import { Fragments } from '../pages/components/components-sections/Fragments';
 import { DisplayData } from '../pages/components/components-sections/DisplayData';
 import { PropsCommunication } from '../pages/components/components-sections/PropsCommunication';
+import { DefaultPropsDestructuring } from '../pages/components/components-sections/DefaultPropsDestructuring';
 
 export const AppRouter = () => {
     return (
@@ -31,6 +32,11 @@ export const AppRouter = () => {
                     <Route path="/mostrar-datos" element={<DisplayData />} />
 
                     <Route path="/props" element={<PropsCommunication />} />
+
+                    <Route
+                        path="/default-props"
+                        element={<DefaultPropsDestructuring />}
+                    />
                 </Routes>
             </Router>
         </>
