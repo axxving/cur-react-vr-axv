@@ -46,6 +46,12 @@ export const Home = () => {
                                 Default Props y Parametros por defecto
                             </a>
                         </li>
+
+                        <li className="list-group-item">
+                            <a onClick={() => navigate('/events')}>
+                                Eventos de React
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

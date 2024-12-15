@@ -12,6 +12,7 @@ import { Fragments } from '../pages/components/components-sections/Fragments';
 import { DisplayData } from '../pages/components/components-sections/DisplayData';
 import { PropsCommunication } from '../pages/components/components-sections/PropsCommunication';
 import { DefaultPropsDestructuring } from '../pages/components/components-sections/DefaultPropsDestructuring';
+import { Events } from '../pages/components/components-sections/Events';
 
 export const AppRouter = () => {
     return (
@@ -37,6 +38,8 @@ export const AppRouter = () => {
                         path="/default-props"
                         element={<DefaultPropsDestructuring />}
                     />
+
+                    <Route path="/events" element={<Events />} />
                 </Routes>
             </Router>
         </>
