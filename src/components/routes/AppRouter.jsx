@@ -6,7 +6,8 @@ import {
     BrowserRouter,
 } from 'react-router-dom';
 import { Home } from '../pages/home';
-import { Components } from '../pages/Components';
+import { Components } from '../pages/components/components-sections/Components';
+import { NewComponent } from '../pages/components/components-sections/NewComponent';
 
 export const AppRouter = () => {
     return (
@@ -15,7 +16,15 @@ export const AppRouter = () => {
                 <Routes>
                     <Route path="/" element={<Home />} />
 
-                    <Route path="/componentes" element={<Components />} />
+                    <Route 
+                        path="/componentes" 
+                        element={<Components />} 
+                    />
+
+                    <Route
+                        path="//nuevo-componente"
+                        element={<NewComponent />}
+                    />
                 </Routes>
             </Router>
         </>
