@@ -28,6 +28,18 @@ export const Home = () => {
                                 Que son y para que sirven los fragmentos?
                             </a>
                         </li>
+
+                        <li className="list-group-item">
+                            <a onClick={() => navigate('/mostrar-datos')}>
+                                Mostrar datos en el template?
+                            </a>
+                        </li>
+
+                        <li className="list-group-item">
+                            <a onClick={() => navigate('/props')}>
+                                Comunicacion entre componentes
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

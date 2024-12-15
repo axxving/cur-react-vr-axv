@@ -9,6 +9,8 @@ import { Home } from '../pages/home';
 import { Components } from '../pages/components/components-sections/Components';
 import { NewComponent } from '../pages/components/components-sections/NewComponent';
 import { Fragments } from '../pages/components/components-sections/Fragments';
+import { DisplayData } from '../pages/components/components-sections/DisplayData';
+import { PropsCommunication } from '../pages/components/components-sections/PropsCommunication';
 
 export const AppRouter = () => {
     return (
@@ -25,6 +27,10 @@ export const AppRouter = () => {
                     />
 
                     <Route path="/fragmentos" element={<Fragments />} />
+
+                    <Route path="/mostrar-datos" element={<DisplayData />} />
+
+                    <Route path="/props" element={<PropsCommunication />} />
                 </Routes>
             </Router>
         </>
