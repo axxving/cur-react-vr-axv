@@ -58,6 +58,12 @@ export const Home = () => {
                                 El problema de usar funciones de JavaScript
                             </a>
                         </li>
+
+                        <li className="list-group-item">
+                            <a onClick={() => navigate('/hook-usestate')}>
+                                Como se usa el Hook useState?
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
