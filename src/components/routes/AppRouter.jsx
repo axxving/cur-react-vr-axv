@@ -17,6 +17,7 @@ import { JsFunctions } from '../pages/components/components-sections/JSFunctions
 import { HookUseState } from '../pages/components/components-sections/hooks/useState/HookUseState';
 import { UseState01 } from '../pages/components/components-sections/hooks/useState/excercices/useState01';
 import { UseState02 } from '../pages/components/components-sections/hooks/useState/excercices/UseState02';
+import { UseState03 } from '../pages/components/components-sections/hooks/useState/excercices/UseState03';
 
 export const AppRouter = () => {
     return (
@@ -52,7 +53,7 @@ export const AppRouter = () => {
                     {/* Hooks */}
                     <Route path="/useState01" element={<UseState01 />} />
                     <Route path="/useState02" element={<UseState02 />} />
-                    
+                    <Route path="/useState03" element={<UseState03 />} />
                 </Routes>
             </Router>
         </>

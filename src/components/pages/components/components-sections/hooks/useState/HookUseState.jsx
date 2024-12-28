@@ -102,6 +102,11 @@ export default Counter;
                             Ejercicio 02
                         </a>
                     </li>
+                    <li className="list-group-item">
+                        <a onClick={() => navigate('/useState03')}>
+                            Ejercicio 03
+                        </a>
+                    </li>
                 </div>
             </div>
         </>
