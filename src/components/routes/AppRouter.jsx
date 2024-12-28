@@ -14,7 +14,8 @@ import { PropsCommunication } from '../pages/components/components-sections/Prop
 import { DefaultPropsDestructuring } from '../pages/components/components-sections/DefaultPropsDestructuring';
 import { Events } from '../pages/components/components-sections/Events';
 import { JsFunctions } from '../pages/components/components-sections/JSFunctions';
-import { HookUseState } from '../pages/components/components-sections/hooks/HookUseState';
+import { HookUseState } from '../pages/components/components-sections/hooks/useState/HookUseState';
+import { UseState01 } from '../pages/components/components-sections/hooks/useState/excercices/useState01';
 
 export const AppRouter = () => {
     return (
@@ -46,6 +47,10 @@ export const AppRouter = () => {
                     <Route path="/js-functions" element={<JsFunctions />} />
 
                     <Route path="/hook-usestate" element={<HookUseState />} />
+
+                    {/* Hooks */}
+                    <Route path="/useState01" element={<UseState01 />} />
+                    
                 </Routes>
             </Router>
         </>

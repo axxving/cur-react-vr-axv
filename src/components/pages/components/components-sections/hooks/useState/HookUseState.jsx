@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export const HookUseState = () => {
+    const navigate = useNavigate();
     const initialCode = `
 import React, { useState } from 'react';
 
@@ -87,6 +89,14 @@ export default Counter;
                             </li>
                         </ul>
                     </div>
+                </div>
+
+                <div className="list-group">
+                    <li className="list-group-item">
+                        <a onClick={() => navigate('/useState01')}>
+                            Ejercicio 01
+                        </a>
+                    </li>
                 </div>
             </div>
         </>
