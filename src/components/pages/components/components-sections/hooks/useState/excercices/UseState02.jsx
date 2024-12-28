@@ -29,7 +29,7 @@ export const UseState02 = () => {
                             className="btn btn-primary w-100"
                             onClick={mostrar}
                         >
-                            Mostrar Texto
+                            {visible ? 'Ocultar Texto' : 'Mostrar Texto'}
                         </button>
                     </div>
                     <div className="col-md-6 text-center">
