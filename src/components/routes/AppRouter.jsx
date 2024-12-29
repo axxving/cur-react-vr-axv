@@ -18,6 +18,7 @@ import { HookUseState } from '../pages/components/components-sections/hooks/useS
 import { UseState01 } from '../pages/components/components-sections/hooks/useState/excercices/useState01';
 import { UseState02 } from '../pages/components/components-sections/hooks/useState/excercices/UseState02';
 import { UseState03 } from '../pages/components/components-sections/hooks/useState/excercices/UseState03';
+import { KeyEvents } from '../pages/components/components-sections/hooks/useState/KeyEvents';
 
 export const AppRouter = () => {
     return (
@@ -25,35 +26,26 @@ export const AppRouter = () => {
             <Router>
                 <Routes>
                     <Route path="/" element={<Home />} />
-
                     <Route path="/componentes" element={<Components />} />
-
                     <Route
                         path="//nuevo-componente"
                         element={<NewComponent />}
                     />
-
                     <Route path="/fragmentos" element={<Fragments />} />
-
                     <Route path="/mostrar-datos" element={<DisplayData />} />
-
                     <Route path="/props" element={<PropsCommunication />} />
-
                     <Route
                         path="/default-props"
                         element={<DefaultPropsDestructuring />}
                     />
-
                     <Route path="/events" element={<Events />} />
-
                     <Route path="/js-functions" element={<JsFunctions />} />
-
                     <Route path="/hook-usestate" element={<HookUseState />} />
-
                     {/* Hooks */}
                     <Route path="/useState01" element={<UseState01 />} />
                     <Route path="/useState02" element={<UseState02 />} />
-                    <Route path="/useState03" element={<UseState03 />} />
+                    <Route path="/useState03" element={<UseState03 />} />4
+                    <Route path="/key-events" element={<KeyEvents />} />
                 </Routes>
             </Router>
         </>

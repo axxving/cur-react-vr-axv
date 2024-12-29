@@ -107,6 +107,12 @@ export default Counter;
                             Ejercicio 03
                         </a>
                     </li>
+
+                    <li className="list-group-item">
+                        <a onClick={() => navigate('/key-events')}>
+                            Eventos del teclado
+                        </a>
+                    </li>
                 </div>
             </div>
         </>
