@@ -64,6 +64,12 @@ export const Home = () => {
                                 Como se usa el Hook useState?
                             </a>
                         </li>
+
+                        <li className="list-group-item">
+                            <a onClick={() => navigate('/ejercicio-01')}>
+                                Ejercicio 01
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

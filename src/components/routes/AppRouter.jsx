@@ -19,6 +19,8 @@ import { UseState01 } from '../pages/components/components-sections/hooks/useSta
 import { UseState02 } from '../pages/components/components-sections/hooks/useState/excercices/UseState02';
 import { UseState03 } from '../pages/components/components-sections/hooks/useState/excercices/UseState03';
 import { KeyEvents } from '../pages/components/components-sections/hooks/useState/KeyEvents';
+import { Exercice01 } from '../pages/components/components-sections/exercice01/Exercice01';
+import { Solution01 } from '../pages/components/components-sections/exercice01/Solution01';
 
 export const AppRouter = () => {
     return (
@@ -46,6 +48,9 @@ export const AppRouter = () => {
                     <Route path="/useState02" element={<UseState02 />} />
                     <Route path="/useState03" element={<UseState03 />} />4
                     <Route path="/key-events" element={<KeyEvents />} />
+                    {/* Ejercicio - 01 */}
+                    <Route path="/ejercicio-01" element={<Exercice01 />} />
+                    <Route path="/solution-01" element={<Solution01 />} />
                 </Routes>
             </Router>
         </>
