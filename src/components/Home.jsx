@@ -76,6 +76,12 @@ export const Home = () => {
                                 Como se usa el Hook useEffect?
                             </a>
                         </li>
+
+                        <li className="list-group-item">
+                            <a onClick={() => navigate('/ajax')}>
+                                AJAX y useEffect
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

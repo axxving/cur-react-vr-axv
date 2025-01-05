@@ -22,6 +22,7 @@ import { KeyEvents } from '../pages/components/components-sections/hooks/useStat
 import { Exercice01 } from '../pages/components/components-sections/exercice01/Exercice01';
 import { Solution01 } from '../pages/components/components-sections/exercice01/Solution01';
 import { HookUseEffect } from '../pages/components/components-sections/hooks/useEffect/HookUseEffect';
+import { Ajax } from '../pages/components/components-sections/http/Ajax';
 
 export const AppRouter = () => {
     return (
@@ -54,6 +55,8 @@ export const AppRouter = () => {
                     <Route path="/solution-01" element={<Solution01 />} />
                     {/* useEffect */}
                     <Route path="/useeffect" element={<HookUseEffect />} />
+                    {/* AJAX */}
+                    <Route path="/ajax" element={<Ajax />} />
                 </Routes>
             </Router>
         </>
