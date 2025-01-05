@@ -70,6 +70,12 @@ export const Home = () => {
                                 Ejercicio 01
                             </a>
                         </li>
+
+                        <li className="list-group-item">
+                            <a onClick={() => navigate('/useeffect')}>
+                                Como se usa el Hook useEffect?
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

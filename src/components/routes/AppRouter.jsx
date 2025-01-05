@@ -5,7 +5,7 @@ import {
     Route,
     BrowserRouter,
 } from 'react-router-dom';
-import { Home } from '../pages/home';
+import { Home } from '../Home';
 import { Components } from '../pages/components/components-sections/Components';
 import { NewComponent } from '../pages/components/components-sections/NewComponent';
 import { Fragments } from '../pages/components/components-sections/Fragments';
@@ -21,6 +21,7 @@ import { UseState03 } from '../pages/components/components-sections/hooks/useSta
 import { KeyEvents } from '../pages/components/components-sections/hooks/useState/KeyEvents';
 import { Exercice01 } from '../pages/components/components-sections/exercice01/Exercice01';
 import { Solution01 } from '../pages/components/components-sections/exercice01/Solution01';
+import { HookUseEffect } from '../pages/components/components-sections/hooks/useEffect/HookUseEffect';
 
 export const AppRouter = () => {
     return (
@@ -51,6 +52,8 @@ export const AppRouter = () => {
                     {/* Ejercicio - 01 */}
                     <Route path="/ejercicio-01" element={<Exercice01 />} />
                     <Route path="/solution-01" element={<Solution01 />} />
+                    {/* useEffect */}
+                    <Route path="/useeffect" element={<HookUseEffect />} />
                 </Routes>
             </Router>
         </>
